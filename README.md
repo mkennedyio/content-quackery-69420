@@ -13,26 +13,25 @@ This is a static site built with [Eleventy](https://www.11ty.dev/) featuring the
 
 ### Prerequisites
 
-- Node.js (v20 or higher recommended)
-- npm
+- [Bun](https://bun.sh/) (latest version recommended)
 
 ### Local Development
 
 1. Install dependencies:
    ```bash
-   npm install
+   bun install
    ```
 
 2. Start the development server:
    ```bash
-   npm start
+   bun start
    ```
 
    The site will be available at `http://localhost:8080`
 
 3. Build for production:
    ```bash
-   npm run build
+   bun run build
    ```
 
    The built site will be in the `_site` directory.
