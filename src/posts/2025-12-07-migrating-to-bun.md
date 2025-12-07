@@ -78,4 +78,4 @@ If you're running a Node.js project and want to experiment with better performan
 
 ---
 
-[← Back to Home]({{ '/' | url }})
+[← Back to Home]({{ 'index.html' | relativePath }})

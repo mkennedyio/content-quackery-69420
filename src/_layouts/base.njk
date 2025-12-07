@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title or "kennedy.io" }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/prism-theme.css' | url }}">
+  <link rel="stylesheet" href="{{ 'assets/css/style.css' | relativePath }}">
+  <link rel="stylesheet" href="{{ 'assets/css/prism-theme.css' | relativePath }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/19.1.1/tooltips.min.css" />
 </head>
 <body>
   <header>
-    <h1><a href="{{ '/' | url }}" style="text-decoration: none; color: inherit;">kennedy.io</a></h1>
+    <h1><a href="{{ 'index.html' | relativePath }}" style="text-decoration: none; color: inherit;">kennedy.io</a></h1>
   </header>
   <main>
     {{ content | safe }}

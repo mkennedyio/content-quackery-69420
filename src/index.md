@@ -54,6 +54,6 @@ My approach combines deep technical expertise with practical implementation expe
 
 ## Recent Posts
 
-### 2025-12-07: [Migrating to Bun]({{ '/posts/2025-12-07-migrating-to-bun/' | url }})
+### 2025-12-07: [Migrating to Bun]({{ 'posts/2025-12-07-migrating-to-bun/index.html' | relativePath }})
 
 First post on the new blog platform. I've migrated this Eleventy site from Node.js to Bun, and the results are impressive.

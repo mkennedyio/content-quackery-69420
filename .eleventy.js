@@ -3,6 +3,18 @@ const codeClipboard = require("eleventy-plugin-code-clipboard");
 const markdownIt = require("markdown-it");
 
 module.exports = function(eleventyConfig) {
+  // Add custom filter for relative paths
+  eleventyConfig.addFilter("relativePath", function(path) {
+    // Get the current page's URL
+    const pageUrl = this.page?.url || "/";
+    // Count the depth (number of slashes minus 1 for root)
+    const depth = (pageUrl.match(/\//g) || []).length - 1;
+    // Create relative prefix (../ for each level)
+    const prefix = depth > 0 ? "../".repeat(depth) : "./";
+    // Combine with path, removing leading slash if present
+    return prefix + path.replace(/^\//, "");
+  });
+
   // Add syntax highlighting plugin
   eleventyConfig.addPlugin(syntaxHighlight, {
     preAttributes: { tabindex: 0 }
@@ -24,7 +36,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
 
   return {
-    pathPrefix: process.env.ELEVENTY_PATH_PREFIX || "/",
     dir: {
       input: "src",
       output: "_site",
