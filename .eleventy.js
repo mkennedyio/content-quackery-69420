@@ -24,6 +24,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
 
   return {
+    pathPrefix: "/content-quackery-69420/",
     dir: {
       input: "src",
       output: "_site",
