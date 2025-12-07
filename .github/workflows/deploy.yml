@@ -37,6 +37,6 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: content-quakery-69420
+          projectName: content-quackery-69420
           directory: _site
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
