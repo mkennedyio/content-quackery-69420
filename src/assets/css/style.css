@@ -137,28 +137,32 @@ footer {
 }
 
 /* Code clipboard button styling */
-.code-clipboard-button {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  padding: 0.4rem 0.8rem;
-  background: var(--bg-tertiary);
-  color: var(--text-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.75rem;
-  transition: all 0.2s;
+.code-copy {
+  background: var(--bg-tertiary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 4px !important;
+  padding: 0.4rem 0.5rem !important;
+  transition: all 0.2s !important;
 }
 
-.code-clipboard-button:hover {
-  background: var(--accent-blue);
-  color: var(--bg-primary);
-  border-color: var(--accent-blue);
+.code-copy:hover {
+  background: var(--accent-blue) !important;
+  border-color: var(--accent-blue) !important;
+  opacity: 1 !important;
 }
 
-.code-clipboard-button.copied {
-  background: var(--accent-purple);
-  color: var(--bg-primary);
-  border-color: var(--accent-purple);
+.code-copy span {
+  filter: invert(0.7);
+}
+
+.code-copy:hover span {
+  filter: invert(1);
+}
+
+/* Tooltip styling for copy feedback */
+.tooltipped::before,
+.tooltipped::after {
+  background: var(--accent-purple) !important;
+  color: var(--bg-primary) !important;
+  border-color: var(--accent-purple) !important;
 }
