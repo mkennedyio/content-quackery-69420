@@ -1,84 +1,28 @@
 ---
 layout: base.njk
-title: Welcome to Midnight
+title: kennedy.io
 ---
 
-## Hello World!
+## About
 
-This is a static site built with [Eleventy](https://www.11ty.dev/) featuring the Midnight dark theme and deployed automatically to GitHub Pages.
+I'm Michael Kennedy, a technology professional specializing in AI/ML and application modernization using cloud technologies. Based in Toronto, I help organizations leverage cutting-edge technologies to transform their infrastructure and applications.
 
-### Features
+**Connect:** [LinkedIn](https://www.linkedin.com/in/michaelkennedy-toronto/)
 
-- **Midnight Dark Theme** - Beautiful dark mode with gradient accents
-- **Syntax Highlighting** - Powered by Prism.js with custom midnight theme
-- **Code Clipboard** - Click the copy button on any code block
-- **Static Site Generation** - Fast and efficient with Eleventy
-- **Automatic Deployment** - Push to main and GitHub Actions handles the rest
+### Certifications & Qualifications
 
-### Code Examples
+- **Google Cloud Professional Cloud Architect** (2021-2025)
+- **Certified Information Systems Security Professional (CISSP)** (2016)
+- **AWS Certified Solutions Architect - Associate**
+- **AWS Certified Cloud Practitioner**
+- **HashiCorp Certified:** Terraform Associate, Vault Associate, Consul Associate
+- **NVIDIA Deep Learning DGX-2** (2019)
+- **Nutanix Platform Sales Certifications**
 
-Try hovering over these code blocks and clicking the copy button in the top-right corner!
+---
 
-#### JavaScript
+## Recent Posts
 
-```javascript
-function greet(name) {
-  console.log(`Hello, ${name}!`);
-  return `Welcome to the midnight theme`;
-}
+### 2025-12-07: [Migrating to Bun](/posts/2025-12-07-migrating-to-bun/)
 
-// Call the function
-const message = greet('Developer');
-console.log(message);
-```
-
-#### Python
-
-```python
-def calculate_fibonacci(n):
-    """Calculate the nth Fibonacci number"""
-    if n <= 1:
-        return n
-    return calculate_fibonacci(n-1) + calculate_fibonacci(n-2)
-
-# Generate first 10 Fibonacci numbers
-fibonacci_sequence = [calculate_fibonacci(i) for i in range(10)]
-print(fibonacci_sequence)
-```
-
-#### CSS
-
-```css
-:root {
-  --bg-primary: #0d1117;
-  --accent-purple: #bc8cff;
-  --accent-blue: #58a6ff;
-}
-
-.gradient-text {
-  background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-```
-
-#### Bash
-
-```bash
-#!/bin/bash
-
-# Build and deploy script
-echo "Building Eleventy site..."
-npm run build
-
-echo "Deploying to GitHub Pages..."
-git add _site
-git commit -m "Deploy updated site"
-git push origin main
-```
-
-### Getting Started
-
-Edit the content in `src/index.md` and push to GitHub. The site will automatically rebuild and deploy!
-
-Inline code also looks great: `const theme = 'midnight'`
+First post on the new blog platform. I've migrated this Eleventy site from Node.js to Bun, and the results are impressive.
