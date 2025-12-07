@@ -1,6 +1,13 @@
-# Eleventy Static Site with GitHub Pages
+# Eleventy Midnight Theme with GitHub Pages
 
-This is a static site built with [Eleventy](https://www.11ty.dev/) and automatically deployed to GitHub Pages.
+This is a static site built with [Eleventy](https://www.11ty.dev/) featuring the Midnight dark theme and automatically deployed to GitHub Pages.
+
+## Features
+
+- **Midnight Dark Theme** - Beautiful minimalist dark mode with gradient accents
+- **Syntax Highlighting** - Powered by Prism.js with custom midnight color scheme
+- **Code Clipboard** - One-click copy functionality for all code blocks
+- **Automatic Deployment** - GitHub Actions workflow for seamless publishing
 
 ## Getting Started
 
@@ -50,26 +57,48 @@ The GitHub Actions workflow will automatically build and deploy your site.
 .
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml      # GitHub Actions workflow
+│       └── deploy.yml           # GitHub Actions workflow
 ├── src/
 │   ├── _layouts/
-│   │   └── base.njk        # Base layout template
+│   │   └── base.njk             # Base layout template
 │   ├── assets/
 │   │   └── css/
-│   │       └── style.css   # Styles
-│   └── index.md            # Home page
-├── .eleventy.js            # Eleventy configuration
-└── package.json            # Dependencies and scripts
+│   │       ├── style.css        # Midnight theme styles
+│   │       └── prism-theme.css  # Syntax highlighting theme
+│   └── index.md                 # Home page
+├── .eleventy.js                 # Eleventy configuration with plugins
+└── package.json                 # Dependencies and scripts
 ```
+
+## Plugins
+
+- [`@11ty/eleventy-plugin-syntaxhighlight`](https://www.11ty.dev/docs/plugins/syntaxhighlight/) - Syntax highlighting for code blocks
+- [`eleventy-plugin-code-clipboard`](https://www.npmjs.com/package/eleventy-plugin-code-clipboard) - Copy-to-clipboard buttons for code blocks
 
 ## Adding Content
 
 - Add new pages as `.md` or `.njk` files in the `src/` directory
 - Edit the layout in `src/_layouts/base.njk`
-- Add styles in `src/assets/css/style.css`
+- Customize theme colors in `src/assets/css/style.css` (CSS variables in `:root`)
+- Add code blocks with syntax highlighting using triple backticks with language identifier
 - Static assets go in `src/assets/`
+
+## Theme Customization
+
+The Midnight theme uses CSS variables for easy customization. Edit `src/assets/css/style.css`:
+
+```css
+:root {
+  --bg-primary: #0d1117;      /* Main background */
+  --bg-secondary: #161b22;    /* Card backgrounds */
+  --accent-purple: #bc8cff;   /* Purple accent */
+  --accent-blue: #58a6ff;     /* Blue accent */
+  --accent-pink: #ff7b72;     /* Pink accent */
+}
+```
 
 ## Learn More
 
 - [Eleventy Documentation](https://www.11ty.dev/docs/)
 - [GitHub Pages Documentation](https://docs.github.com/en/pages)
+- [11ty-midnight Theme](https://github.com/sidswork/11ty-midnight) - Inspiration for this theme
